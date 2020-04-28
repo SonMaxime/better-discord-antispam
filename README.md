@@ -5,15 +5,15 @@ Note: If the bot have muted someone for 10min, 4min have passed then randomly th
 
 Additional note: This version 2.0.0 is made to work with the discord.js version 12 and only that, if you try to use it with other version (lower obv), it won't work. For that, get version 1.0.6 and do not forget to fix the channel log to be "antispam-logs".
 
-Any other issues, please open it on [Github](https://github.com/MirageZoe/better-discord-antispam)!
+Any other issues, please open it on [Github](https://github.com/SonMaxime/better-discord-antispam)!
 ## better-discord-antispam.js
-A simple module based on Michael Scofield's module: discord-anti-spam.js! While containing the same efficiency(quick and simple setup), it comes with new things like setting up a report channel, timed mutes(removed ban option and added mute & unmute automatically) and many more features coming on the way!
+Un module simple basé sur le module de MirageZoe : better-discord-antispam.js ! Tout en contenant la même efficacité (configuration rapide et simple), il est livré avec de nouvelles choses comme la configuration d’un canal de rapport, timed mutes (supprimé l’option de ban et ajouté mute & unmute automatiquement) et beaucoup plus de fonctionnalités venant sur le chemin... Mais en français !
 
-**DISCLAMER:** You can only setup 1 set of configuration per client. (That means that you can't configure settings for each server for now. You can only modify in which guild checker is run and in which checker is not run.) 
+**DISCLAMER:** Vous pouvez seulement configurer 1 ensemble de configuration par client. (Cela signifie que vous ne pouvez pas configurer les paramètres pour chaque serveur pour l’instant. Vous pouvez seulement modifier dans quel vérificateur de guilde est exécuté et dans quel vérificateur n’est pas exécuté.)
 
 
 ## How to add this to your node_modules:
-To install this module type in your console command below:
+Pour installer ce module, saisir la commande de la console ci-dessous :
 ```
 npm i better-discord-antispam
 ```
