@@ -18,7 +18,7 @@ module.exports = async (client, options) => {
   const ignoredMembers = (options && options.ignoredMembers) || [];
   const mutedRole = (options && options.mutedRole) || "Muté"; 
   const timeMuted = (options && options.timeMuted) || 1000 * 600;
-  const logChannel = (options && options.logChannel) || "reports";
+  const logChannel = (options && options.logChannel) || "antispam-logs";
 
   if(isNaN(limitUntilWarn)) throw new Error("ERREUR : L’option <limitUntilWarn> n’est pas configurée correctement ! Veuillez vérifier à nouveau qu’il s’agit d’un nombre dans les paramètres.");
   if(isNaN(limitUntilMuted)) throw new Error("ERREUR : L’option <limitUntilMuted> n’est pas configurée correctement ! Veuillez ajouter un nombre dans les paramètres.");
