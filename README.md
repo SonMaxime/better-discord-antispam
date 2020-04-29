@@ -12,18 +12,18 @@ Un module simple basé sur le module de MirageZoe : better-discord-antispam.js !
 **DISCLAMER:** Vous pouvez seulement configurer 1 ensemble de configuration par client. (Cela signifie que vous ne pouvez pas configurer les paramètres pour chaque serveur pour l’instant. Vous pouvez seulement modifier dans quel vérificateur de guilde est exécuté et dans quel vérificateur n’est pas exécuté.)
 
 
-## How to add this to your node_modules:
+## Comment l'ajouter à vos node_modules :
 Pour installer ce module, saisir la commande de la console ci-dessous :
 ```
-npm i discord-antispam-fr
+npm i better-discord-antispam-fr
 ```
 
-## An example of how to set up:
-Below you will find an example that would explain everything and what you must set up! (it's not too different!)
+## Un exemple de configuration :
+Ci-dessous vous trouverez un exemple qui expliquerait tout et ce que vous devez mettre en place! (ce n’est pas trop différent!)
 
 ```js
 const Discord = require('discord.js');
-const antispam = require('discord-antispam-fr'); // Requiring this module.
+const antispam = require('better-discord-antispam-fr'); // Requiring this module.
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -54,14 +54,14 @@ client.login('token');
 ```
 C’est la configuration principale que vous devez ajouter afin de protéger votre serveur contre les personnes indésirables. S’ils envoient plus de 3 messages en 2 secondes, ils sont avertis. À 5, ils sont mis en sourdine. S’ils envoient le même message 7+ fois, il est averti et à 10 muet. Chaque membre de ignoredMembers> option et tous ceux qui ont le rôle / rôles de ignoredRoles> sont protégés du système afin qu’ils puissent spam autant qu’ils le veulent.
 
-## Little bit of documentation...
+## Un peu de documentation...
 
 ```js
 antispam(<Client>);
 ```
-This will configure module to run on its default configuration.<br>
+Cela permet de configurer le module pour qu’il fonctionne avec sa configuration par défaut.<br>
 `<Client>` - Variable qui définis `new Discord.Client()`<br>
-`antispam` - Variable qui définis `require('better-discord-antispam')` <br>
+`antispam` - Variable qui définis `require('discord-antispam-fr')` <br>
 <br>
 ```js
 client.emit('checkMessage', <Message>)
@@ -85,7 +85,7 @@ antispam(client, {
 		logChannel: ""
       });
 ```
-`antispam` - Variable qui définis `require('better-discord-anti-spam')` <br>
+`antispam` - Variable qui définis `require('better-discord-antispam-fr')` <br>
 `<Client>` - Requis, Discord.Client<br>
 `limitUntilWarn` - Optionnel, Type: Integer<br>
 `limitUntilMuted` - Optionnel, Type: Integer<br>
