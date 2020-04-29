@@ -23,33 +23,31 @@ Below you will find an example that would explain everything and what you must s
 
 ```js
 const Discord = require('discord.js');
-const antispam = require('better-discord-antispam'); // Requiring this module.
+const antispam = require('discord-antispam-fr'); // Requiring this module.
 const client = new Discord.Client();
 
 client.on('ready', () => {
   // Module Configuration Constructor
    antispam(client, {
-        limitUntilWarn: 3, // The amount of messages allowed to send within the interval(time) before getting a warn.
-        limitUntilMuted: 5, // The amount of messages allowed to send within the interval(time) before getting a muted.
-        interval: 2000, // The interval(time) where the messages are sent. Practically if member X sent 5+ messages within 2 seconds, he get muted. (1000 milliseconds = 1 second, 2000 milliseconds = 2 seconds etc etc)
-        warningMessage: "if you don't stop from spamming, I'm going to punish you!", // Message you get when you are warned!
-        muteMessage: "was muted since we don't like too much advertisement type people!", // Message sent after member X was punished(muted).
-        maxDuplicatesWarning: 7,// When people are spamming the same message, this will trigger when member X sent over 7+ messages.
-        maxDuplicatesMute: 10, // The limit where member X get muted after sending too many messages(10+).
-        ignoredRoles: ["Admin"], // The members with this role(or roles) will be ignored if they have it. Suggest to not add this to any random guys. Also it's case sensitive.
-        ignoredMembers: ["Mavis#2389"], // These members are directly affected and they do not require to have the role above. Good for undercover pranks.
-		mutedRole: "muted", // Here you put the name of the role that should not let people write/speak or anything else in your server. If there is no role set, by default, the module will attempt to create the role for you & set it correctly for every channel in your server. It will be named "muted".
-		timeMuted: 1000 * 600, // This is how much time member X will be muted. if not set, default would be 10 min.
-		logChannel: "antispam-logs" // This is the channel where every report about spamming goes to. If it's not set up, it will attempt to create the channel.
+        limitUntilWarn: 3, // La quantité de messages autorisés à envoyer dans l’intervalle (temps) avant d’obtenir un avertissement.
+        limitUntilMuted: 5, // La quantité de messages autorisés à envoyer dans l’intervalle (temps) avant d’obtenir une sourdine.
+        interval: 2000, // L’intervalle (temps) où les messages sont envoyés. Pratiquement, si le membre X a envoyé 5+ messages en 2 secondes, il est mis en sourdine. (1000 millisecondes = 1 seconde, 2000 millisecondes = 2 secondes, etc.)
+        warningMessage: "if you don't stop from spamming, I'm going to punish you!", // Message que vous recevez lorsque vous êtes averti!
+        muteMessage: "was muted since we don't like too much advertisement type people!", // Message envoyé après que le membre X a été puni (mis en sourdine).
+        maxDuplicatesWarning: 7,// Lorsque les gens envoient le même message, cela se produit lorsque le membre X envoie plus de 7 messages.
+        maxDuplicatesMute: 10, // La limite où le membre X est mis en sourdine après avoir envoyé trop de messages (10+).
+        ignoredRoles: ["Admin"], // Les membres ayant ce rôle (ou ces rôles) seront ignorés s’ils l’ont. Suggérez de ne pas ajouter cela à des gars aléatoires. De plus, c’est sensible à la casse.
+        ignoredMembers: ["Mavis#2389"], // Ces membres sont directement touchés et ils n’ont pas besoin d’avoir le rôle ci-dessus. Bon pour les blagues d’infiltration.
+		mutedRole: "muet", // Ici, vous mettez le nom du rôle qui ne devrait pas laisser les gens écrire/parler ou quoi que ce soit d’autre dans votre serveur. S’il n’y a pas de jeu de rôle, par défaut, le module tentera de créer le rôle pour vous et de le définir correctement pour chaque canal de votre serveur. Il sera nommé "muet".
+		timeMuted: 1000 * 600, // C’est le temps pendant lequel le membre X sera mis en sourdine. Si ce n’est pas le cas, la valeur par défaut serait de 10 minutes.
+		logChannel: "antispam-logs" // C’est le canal où chaque rapport sur le spamming va. S’il n’est pas configuré, il tentera de créer le canal.
       });
       
-  // Rest of your code
 });
 
 client.on('message', msg => {
-  client.emit('checkMessage', msg); // This runs the filter on any message bot receives in any guilds.
+  client.emit('checkMessage', msg); // Ceci exécute le filtre sur n’importe quel message que le bot reçoit dans n’importe quelle guilde.
   
-  // Rest of your code
 }
 
 client.login('token');
