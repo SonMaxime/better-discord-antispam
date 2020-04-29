@@ -1,11 +1,11 @@
 #Update: 
-The npm have been updated to work with the newest update of discord.js v12!
+Le npm a été mis à jour pour fonctionner avec la dernière mise à jour de discord.js v12!
 
-Note: If the bot have muted someone for 10min, 4min have passed then randomly the bot went offline, do not forget to remove the role from user once the rest 6min are gone or the it's muted forever! (will modify this later)
+Remarque : Si le bot a mis quelqu’un en sourdine pendant 10min, 4min ont passé puis au hasard le bot est allé hors ligne, n’oubliez pas de supprimer le rôle de l’utilisateur une fois que le reste 6min sont partis ou le il est mis en sourdine pour toujours! (modifiera plus tard)
 
-Additional note: This version 2.0.0 is made to work with the discord.js version 12 and only that, if you try to use it with other version (lower obv), it won't work. For that, get version 1.0.6 and do not forget to fix the channel log to be "antispam-logs".
+Note supplémentaire : Cette version 2.0.0 est faite pour fonctionner avec le discord.js version 12 et seulement que, si vous essayez de l’utiliser avec une autre version (obv inférieur), il ne fonctionnera pas. Pour cela, récupérez la version 1.0.6 et n’oubliez pas de corriger le journal des canaux pour qu’il soit "antispam-logs".
 
-Any other issues, please open it on [Github](https://github.com/SonMaxime/better-discord-antispam)!
+Pour tout autre problème, veuillez l’ouvrir sur [Github](https://github.com/SonMaxime/better-discord-antispam)!
 ## better-discord-antispam.js
 Un module simple basé sur le module de MirageZoe : better-discord-antispam.js ! Tout en contenant la même efficacité (configuration rapide et simple), il est livré avec de nouvelles choses comme la configuration d’un canal de rapport, timed mutes (supprimé l’option de ban et ajouté mute & unmute automatiquement) et beaucoup plus de fonctionnalités venant sur le chemin... Mais en français !
 
@@ -15,7 +15,7 @@ Un module simple basé sur le module de MirageZoe : better-discord-antispam.js !
 ## How to add this to your node_modules:
 Pour installer ce module, saisir la commande de la console ci-dessous :
 ```
-npm i better-discord-antispam
+npm i discord-antispam-fr
 ```
 
 ## An example of how to set up:
