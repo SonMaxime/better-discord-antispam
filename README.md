@@ -52,7 +52,7 @@ client.on('message', msg => {
 
 client.login('token');
 ```
-This is the main setup you have to add in order to protect your server from unwanted people. If they send more than 3 messages within 2 seconds, they get warned. At 5 they get muted. If they send same message 7+ times, he get warned and at 10 muted. Every member from <ignoredMembers> option and everyone that has the role/roles from <ignoredRoles> are protected from system so they can spam as much as they want.
+C’est la configuration principale que vous devez ajouter afin de protéger votre serveur contre les personnes indésirables. S’ils envoient plus de 3 messages en 2 secondes, ils sont avertis. À 5, ils sont mis en sourdine. S’ils envoient le même message 7+ fois, il est averti et à 10 muet. Chaque membre de ignoredMembers> option et tous ceux qui ont le rôle / rôles de ignoredRoles> sont protégés du système afin qu’ils puissent spam autant qu’ils le veulent.
 
 ## Little bit of documentation...
 
@@ -60,14 +60,14 @@ This is the main setup you have to add in order to protect your server from unwa
 antispam(<Client>);
 ```
 This will configure module to run on its default configuration.<br>
-`<Client>` - Variable that defines `new Discord.Client()`<br>
-`antispam` - Variable that defines `require('better-discord-antispam')` <br>
+`<Client>` - Variable qui définis `new Discord.Client()`<br>
+`antispam` - Variable qui définis `require('better-discord-antispam')` <br>
 <br>
 ```js
 client.emit('checkMessage', <Message>)
 ```
-`<Message>` - Variable that defines the message itself. (`client.on('message', async (msg) =>{})` in this situation msg is the <Message> variable.)
-This will basically send your message to module. In fact is REQUIERED for module to run.<br>
+`<Message>` - Variable qui définis le message lui même. (`client.on('message', async (msg) =>{})`dans cette situation, msg est la variable de <Message>.)
+Cela va essentiellement envoyer votre message au module. En fait, est REQUIS pour le module à exécuter.<br>
 <br>
 ```js
 antispam(client, {
@@ -85,20 +85,20 @@ antispam(client, {
 		logChannel: ""
       });
 ```
-`antispam` - Variable that defines `require('better-discord-anti-spam')` <br>
-`<Client>` - Requiered, Discord.Client<br>
-`limitUntilWarn` - Optional, Type: Integer<br>
-`limitUntilMuted` - Optional, Type: Integer<br>
+`antispam` - Variable qui définis `require('better-discord-anti-spam')` <br>
+`<Client>` - Requis, Discord.Client<br>
+`limitUntilWarn` - Optionnel, Type: Integer<br>
+`limitUntilMuted` - Optionnel, Type: Integer<br>
 `interval` - Optional, Type: Integer<br>
-`warningMessage` - Optonal, Type: String, Minimum 5 Characters<br>
-`muteMessage` - Optional, Type: String, Minimum 5 Characters<br>
-`maxDuplicatesWarning` - Optional, Type: Integer<br>
-`maxDuplicatesMute` - Optional, Type: Integer<br>
-`ignoredRoles` - Optional, Type: Array<br>
-`ignoredMembers`- Optional, Type: Array<br>
-`mutedRole`- Optional, Type: String<br>
-`timeMuted`- Optional, Type: Integer<br>
-`logChannel`- Optional, Type: String<br>
+`warningMessage` - Optionnel, Type: String, Minimum 5 Characters<br>
+`muteMessage` - Optionnel, Type: String, Minimum 5 Characters<br>
+`maxDuplicatesWarning` - Optionnel, Type: Integer<br>
+`maxDuplicatesMute` - Optionnel, Type: Integer<br>
+`ignoredRoles` - Optionnel, Type: Array<br>
+`ignoredMembers`- Optionnel, Type: Array<br>
+`mutedRole`- Optionnel, Type: String<br>
+`timeMuted`- Optionnel, Type: Integer<br>
+`logChannel`- Optionnel, Type: String<br>
 <br>
 **NOTE:** The module **will** throw errors for assigning incorect types to configuration values.<br>
 <br>
